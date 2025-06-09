@@ -97,13 +97,21 @@ footer {
     padding-bottom: 40px;
 }
 
+.footer-cont {
+  display: flex;
+  flex-flow: column;
+  width: 1200px;
+  margin: 0 auto;
+}
+
 .footer-p {
     font-size: 40px;
     font-weight: bold;
     color: #0b233f;
-    margin-left: 210px;
+    /* margin-left: 210px; */
     letter-spacing: 1px;
     padding-bottom: 20px;
+    padding-left: 50px;
 }
 
 .container {
@@ -112,6 +120,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     padding: 20px;
+    width: 1200px;
   }
 
   .item {
