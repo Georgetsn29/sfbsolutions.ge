@@ -100,7 +100,7 @@ footer {
 .footer-cont {
   display: flex;
   flex-flow: column;
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
 }
 
@@ -111,7 +111,7 @@ footer {
     /* margin-left: 210px; */
     letter-spacing: 1px;
     padding-bottom: 20px;
-    padding-left: 50px;
+    margin-left: 50px;
 }
 
 .container {
