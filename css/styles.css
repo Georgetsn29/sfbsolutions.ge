@@ -47,6 +47,42 @@ header {
   margin-left: 60px;
 }
 
+button {
+  background-color: #d52f20;
+  color: #fffdf4;
+  border: none;
+  padding: 20px 30px;
+  font-size: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin-top: 60px;
+  font-family: 'BPG Boxo-Boxo';
+  box-shadow: 20px 20px 15px 10px rgba(116, 116, 116, 0.205);
+}
+
+button:hover {
+  background-color: #bb291c;
+}
+
+#hiddenText {
+  display: none;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #333;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#hiddenText.show {
+  display: block;
+  opacity: 1;
+}
+
+.hidden {
+  display: none;
+}
+
 .head-text span {
     color: #0b233fb3;
 }
