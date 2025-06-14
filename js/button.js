@@ -1,14 +1,14 @@
 const button = document.getElementById('showButton');
-        const hiddenText = document.getElementById('hiddenText');
+const hiddenText = document.getElementById('hiddenText');
 
-        button.addEventListener('click', () => {
-            // Hide button when clicked
-            button.classList.add('hidden');
+button.addEventListener('click', () => {
+  // Toggle the text visibility
+  hiddenText.classList.toggle('show');
 
-            // Toggle text visibility
-            if (hiddenText.classList.contains('show')) {
-                hiddenText.classList.remove('show');
-            } else {
-                hiddenText.classList.add('show');
-            }
-        });
+  // Update the button label
+  if (hiddenText.classList.contains('show')) {
+    button.textContent = 'აკეცეთ';
+  } else {
+    button.textContent = 'ჩამოშალეთ';
+  }
+});
