@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="სრულყოფილი გადაწყვეტილებები თქვენი სავაჭრო სივრცისთვის — ერთი პარტნიორი, ყველა საჭიროებისთვის">
     <meta name="keywords" content="sfbsolutions, sfb, solutions">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="./img/head.png" type="image/png">
     <link rel="stylesheet" href="./css/styles.css">
     <title>sfbsolutions</title>
@@ -17,7 +19,7 @@
             <h1>&nbsp; &nbsp; სრულყოფილი გადაწყვეტილებები თქვენი<br> სავაჭრო სივრცისთვის<span> — ერთი პარტნიორი,<br> ყველა საჭიროებისთვის</span>
             </h1>
             <p id="hiddenText">ტექნიკური აღჭურვა, კონსულტაცია, მონტაჟი და შემდგომი <br> — დაგეხმარებით, რომ თქვენი ბიზნესის ოპერაციები<br> თანამედროვე სტანდარტებზე გადაიყვანოთ.</p>
-             <button id="showButton">ჩამოშალეთ</button>
+             <button id="showButton" data-aos="fade-up" data-aos-delay="400">ჩამოშალეთ</button>
         </div>
         <img src="./img/1.jpg" alt="" class="headR-img">
     </header>
@@ -34,48 +36,46 @@
 
     <footer>
 
-      <div class="footer-cont">
+  <div class="footer-cont">
         <p class="footer-p">მომსახურება</p>
+      <div class="container">
+        <div class="item" data-aos="fade-up" data-aos-delay="200">
+          <img src="./img/4.1.png" alt="Image 1" />
+          <h2>ბიზნეს<br> კონსულტაცია</h2>
+          <ul>
+            <li>ბიზნეს პროცესების ანალიზი</li>
+            <li>ტექნიკური საჭიროებების განსაზღვრა</li>
+            <li>ინდივიდუალური გადაწყვეტილებების დაგეგმვა</li>
+          </ul>
+        </div>
 
-        <div class="container">
-  <div class="item">
-    <img src="./img/4.1.png" alt="Image 1" />
-    <h2>ბიზნეს<br> კონსულტაცია</h2>
-    <ul>
-      <li>ბიზნეს პროცესების ანალიზი</li>
-      <li>ტექნიკური საჭიროებების განსაზღვრა</li>
-      <li>ინდივიდუალური გადაწყვეტილებების დაგეგმვა</li>
-    </ul>
-  </div>
+        <div class="item" data-aos="fade-up" data-aos-delay="300">
+          <img src="./img/4.2.png" alt="Image 2" />
+          <h2>ტექნიკური<br> აღჭურვა</h2>
+          <ul>
+            <li>სავაჭრო თაროები და სტენდები</li>
+            <li>სარეკლამო მონიტორები</li>
+            <li>ვიდეოკონტროლისა და უსაფრთხოების სისტემები</li>
+          </ul>
+        </div>
 
-  <div class="item">
-    <img src="./img/4.2.png" alt="Image 2" />
-    <h2>ტექნიკური<br> აღჭურვა</h2>
-    <ul>
-      <li>სავაჭრო თაროები და სტენდები</li>
-      <li>სარეკლამო მონიტორები</li>
-      <li>ვიდეოკონტროლისა და უსაფრთხოების სისტემები</li>
-    </ul>
-  </div>
+        <div class="item" data-aos="fade-up" data-aos-delay="400">
+          <img src="./img/4.3.png" alt="Image 3" />
+          <h2>მონტაჟი და <br> ინსტალაცია</h2>
+          <ul>
+            <li>პროფესიონალური მონტაჟი და სრულყოფილი ინსტალაცია თქვენი ტექნიკისა და სისტემების სწრაფად და საიმედოდ.</li>
+          </ul>
+        </div>
 
-  <div class="item">
-    <img src="./img/4.3.png" alt="Image 3" />
-    <h2>მონტაჟი და <br> ინსტალაცია</h2>
-    <ul>
-      <li>პროფესიონალური მონტაჟი და სრულყოფილი ინსტალაცია თქვენი ტექნიკისა და სისტემების სწრაფად და საიმედოდ.</li>
-    </ul>
-  </div>
-
-  <div class="item">
-    <img src="./img/4.4.png" alt="Image 4" />
-    <h2>ტექნიკური სერვისი და მხარდაჭერა</h2>
-    <ul>
-      <li>გრძელვადიანი ტექნიკური მხარდაჭერა და სერვისები თქვენი ბიზნესის შეუფერხებლად ფუნქციონირებისთვის.</li>
-    </ul>
-  </div>
-
-</div>
+        <div class="item" data-aos="fade-up" data-aos-delay="500">
+          <img src="./img/4.4.png" alt="Image 4" />
+          <h2>ტექნიკური სერვისი და მხარდაჭერა</h2>
+          <ul>
+            <li>გრძელვადიანი ტექნიკური მხარდაჭერა და სერვისები თქვენი ბიზნესის შეუფერხებლად ფუნქციონირებისთვის.</li>
+          </ul>
+        </div>
       </div>
+  </div>
 
         
 
@@ -84,12 +84,19 @@
   <p><strong>ელ. ფოსტა:</strong> info@sfbsolutions.ge</p>
   <p><strong>ელ. ფოსტა:</strong> service@sfbsolutions.ge</p>
   <p><strong>ელ. ფოსტა:</strong> sales@sfbsolutions.ge</p>
-  <!-- <p><strong>ტელეფონი:</strong> +995 599 123 456</p> -->
   <p><strong>მისამართი:</strong> თბილისი, წერეთლის ქუჩა Nº115</p>
 </div>
     </footer>
     
     <script src="https://kit.fontawesome.com/5350ff449c.js" crossorigin="anonymous"></script>
     <script src="./js/button.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/data-aos-transition.js"></script>
+    <script>
+      window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+      };
+    </script>
+
 </body>
 </html>
