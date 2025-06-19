@@ -37,6 +37,8 @@ header {
 .head-text h1 {
   color: #0b233f;
   margin-top: 20px;
+  text-align: center;
+  padding-right: 40px;
 }
 
 .head-text p {
@@ -115,6 +117,7 @@ header {
   color: #333;
   opacity: 0;
   transition: opacity 0.6s ease;
+  text-align: center;
 }
 
 #hiddenText.show {
@@ -338,6 +341,7 @@ footer {
 
   .head-text h1 {
     font-size: 26px;
+    padding-right: 0px;
   }
 
   .head-text p {
