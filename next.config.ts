@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+const repoName = "";
+
+const NextConfig: NextConfig = {
+    output: "export",
+    basePath: `/${repoName}`,
+    assetPrefix: `/${repoName}`,
+    trailingSlash: true,
 };
 
-export default nextConfig;
+export default NextConfig;
