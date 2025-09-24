@@ -27,7 +27,7 @@ export default function Page() {
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.headText}>
-          <Image src="/public/img/logo1.png" alt="SFB Solutions Logo" width={300} height={200} className={styles.hT} />
+          <Image src="/img/logo1.png" alt="SFB Solutions Logo" width={300} height={200} className={styles.hT} />
           <h1>
            &nbsp; &nbsp; სრულყოფილი გადაწყვეტილებები თქვენი სავაჭრო სივრცისთვის
             <span> — ერთი პარტნიორი, ყველა საჭიროებისთვის</span>
@@ -50,7 +50,7 @@ export default function Page() {
           </button>
         </div>
 
-        <Image src="/public/img/1.png" alt="Main visual" width={803.88} height={535.91} className={styles.headRImg} />
+        <Image src="/img/1.png" alt="Main visual" width={803.88} height={535.91} className={styles.headRImg} />
       </header>
 
       {/* Main */}
@@ -67,7 +67,7 @@ export default function Page() {
             ყველგან, სადაც ტექნიკური სიზუსტე და ოპტიმიზაცია აუცილებელია.
           </p>
         </div>
-        <Image src="/public/img/3.png" alt="About us image" width={360} height={308} data-aos="fade-left" data-aos-delay="300" />
+        <Image src="/img/3.png" alt="About us image" width={360} height={308} data-aos="fade-left" data-aos-delay="300" />
       </main>
 
       {/* Footer */}
@@ -76,7 +76,7 @@ export default function Page() {
           <p className={styles.footerP}>მომსახურება</p>
           <div className={styles.container}>
             <div className={styles.item} data-aos="fade-up" data-aos-delay="200">
-              <Image src="/public/img/4.1.png" alt="Business Consulting" width={89} height={81} className={styles.itemImg} />
+              <Image src="/img/4.1.png" alt="Business Consulting" width={89} height={81} className={styles.itemImg} />
               <h2>
                 ბიზნეს <br /> კონსულტაცია
               </h2>
@@ -88,7 +88,7 @@ export default function Page() {
             </div>
 
             <div className={styles.item} data-aos="fade-up" data-aos-delay="300">
-              <Image src="/public/img/4.2.png" alt="Technical Equipment" width={91} height={82} className={styles.itemImg} />
+              <Image src="/img/4.2.png" alt="Technical Equipment" width={91} height={82} className={styles.itemImg} />
               <h2>
                 ტექნიკური <br /> აღჭურვა
               </h2>
@@ -100,7 +100,7 @@ export default function Page() {
             </div>
 
             <div className={styles.item} data-aos="fade-up" data-aos-delay="400">
-              <Image src="/public/img/4.3.png" alt="Installation" width={80} height={88} className={styles.itemImg} />
+              <Image src="/img/4.3.png" alt="Installation" width={80} height={88} className={styles.itemImg} />
               <h2>
                 მონტაჟი და <br /> ინსტალაცია
               </h2>
@@ -113,7 +113,7 @@ export default function Page() {
             </div>
 
             <div className={styles.item} data-aos="fade-up" data-aos-delay="500">
-              <Image src="/public/img/4.4.png" alt="Technical Support" width={67} height={82} className={styles.itemImg} />
+              <Image src="/img/4.4.png" alt="Technical Support" width={67} height={82} className={styles.itemImg} />
               <h2>ტექნიკური სერვისი და მხარდაჭერა</h2>
               <ul>
                 <li>
