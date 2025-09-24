@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postbuild": "echo > out/.npjekyll",
+    "postbuild": "echo > out/.nojekyll",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d out"
   },
