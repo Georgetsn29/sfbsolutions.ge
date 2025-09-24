@@ -50,7 +50,7 @@ export default function Page() {
           </button>
         </div>
 
-        <Image src="/img/1.png" alt="Main visual" width={803.88} height={535.91} className={styles.headRImg} />
+        <Image src="./img/1.png" alt="Main visual" width={803.88} height={535.91} className={styles.headRImg} />
       </header>
 
       {/* Main */}
