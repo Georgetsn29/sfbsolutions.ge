@@ -125,6 +125,9 @@ export default function Page() {
           </div>
         </div>
 
+
+          <svg className={styles.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0b233f" fill-opacity="1" d="M0,288L120,293.3C240,299,480,309,720,298.7C960,288,1200,256,1320,240L1440,224L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+
         <div className={styles.contactInfo}>
           <h2>
             <FontAwesomeIcon icon={faPhone} /> საკონტაქტო ინფორმაცია

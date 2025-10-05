@@ -46,12 +46,12 @@ header {
 main {
   display: flex;
   justify-content: space-between;
-  padding: 200px 150px 0 150px;
+  padding: 0px 150px 0 150px;
+  margin-top: 200px;
 }
 
 footer {
   padding-top: 200px;
-  padding-bottom: 40px;
 }
 
 
