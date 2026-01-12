@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -11,10 +11,18 @@ import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 export default function Page() {
   const [showText, setShowText] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
+
+  
   useEffect(() => {
-    AOS.init({ once: true });
-    // Reset scroll on reload
+    AOS.init({ 
+      duration: 1000,
+      mirror: true,
+      once: false,
+      easing: 'ease',
+      
+     });
     if (typeof window !== "undefined") {
       window.onbeforeunload = function () {
         window.scrollTo(0, 0);
@@ -22,8 +30,69 @@ export default function Page() {
     }
   }, []);
 
+  const updateScrollProgress = useCallback(() => {
+        const scrollableHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        
+        const scrolled = document.documentElement.scrollTop;
+        
+        if (scrollableHeight > 0) {
+            let percentage = scrolled / scrollableHeight;
+            
+            percentage = Math.max(0, Math.min(1, percentage)) * 100;
+            
+            setScrollProgress(percentage);
+        } else {
+            setScrollProgress(0);
+        }
+    }, []);
+
+  useEffect(() => {
+        window.addEventListener('scroll', updateScrollProgress);
+        
+        updateScrollProgress();
+
+        return () => window.removeEventListener('scroll', updateScrollProgress);
+    }, [updateScrollProgress]);
+
+    const translationPercentage = 100 - scrollProgress;
+
+  const contentBlocks = Array.from({ length: 10 }).map((_, i) => (
+        <div key={i} className="content-block">
+            <h2 className="text-3xl font-bold mb-4 text-white">Section {i + 1}: Deep Dive into Fluid Design</h2>
+            <p className="mb-4 text-gray-400">
+                This section is designed purely to increase the height of the document. The more you scroll through these informational blocks, 
+                the closer the progress bar gets to its full state. It visually represents the remaining content.
+            </p>
+            <p className="text-sm text-gray-500">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, debitis! Commodi, tempora voluptatibus. 
+                Esse officiis, laboriosam aspernatur sint facilis nulla voluptatum cumque dolore, quasi sed fuga eveniet rerum, 
+                repellat quibusdam? Tenetur vel provident, reiciendis, voluptatibus similique, quod esse pariatur error 
+                quibusdam doloremque quia!
+            </p>
+        </div>
+    ));
+
   return (
     <div>
+
+      <div className="progress-track">
+                {/* The actual moving bar. 
+                  Dynamic style property is used here for real-time updates.
+                  NOTE: Transition is now '500ms ease-out' for a slower, smoother effect.
+                */}
+                <div 
+                    id="scroll-progress-bar" 
+                    style={{ 
+                        width: '100%',
+                        backgroundColor: '#0f325aff', // bg-primary
+                        borderRadius: '9999px', // rounded-full
+                        height: '100%',
+                        transition: 'transform 500ms ease-out', // <-- Updated here!
+                        transform: `translateY(-${translationPercentage}%)`,
+                    }}
+                />
+            </div>
+
       {/* Header */}
       <header className={styles.header}>
         <div className={styles.headText}>
@@ -41,13 +110,13 @@ export default function Page() {
             </p>
           )}
 
-          <button
+            <button
             onClick={() => setShowText((prev) => !prev)}
             data-aos="fade-up"
-            data-aos-delay="400"
-          >
+            >
             {showText ? "დამალეთ" : "ჩამოშალეთ"}
           </button>
+          
         </div>
 
         <Image src="/img/1.png" alt="Main visual" width={803.88} height={535.91} className={styles.headRImg} />
@@ -55,7 +124,7 @@ export default function Page() {
 
       {/* Main */}
       <main>
-        <div className={styles.aboutUS}>
+        <div className={styles.aboutUS} data-aos="fade-up">
           <p className={styles.aboutUsHeadTXT}>ჩვენს შესახებ</p>
           <p className={styles.aboutUSMain}>
             &nbsp; &nbsp; &nbsp; Solutions For F&B — ჩვენი მისიაა გავამარტივოთ თქვენი
@@ -67,7 +136,7 @@ export default function Page() {
             ყველგან, სადაც ტექნიკური სიზუსტე და ოპტიმიზაცია აუცილებელია.
           </p>
         </div>
-        <Image src="/img/3.png" alt="About us image" width={360} height={308} data-aos="fade-left" data-aos-delay="300" />
+        <Image src="/img/3.png" alt="About us image" width={360} height={308} data-aos="fade-left"/>
       </main>
 
       {/* Footer */}
@@ -75,7 +144,7 @@ export default function Page() {
         <div className={styles.footerCont}>
           <p className={styles.footerP}>მომსახურება</p>
           <div className={styles.container}>
-            <div className={styles.item} data-aos="fade-up" data-aos-delay="200">
+            <div className={styles.item} data-aos="fade-up">
               <Image src="/img/4.1.png" alt="Business Consulting" width={89} height={81} className={styles.itemImg} />
               <h2>
                 ბიზნეს <br /> კონსულტაცია
@@ -87,7 +156,7 @@ export default function Page() {
               </ul>
             </div>
 
-            <div className={styles.item} data-aos="fade-up" data-aos-delay="300">
+            <div className={styles.item} data-aos="fade-up">
               <Image src="/img/4.2.png" alt="Technical Equipment" width={91} height={82} className={styles.itemImg} />
               <h2>
                 ტექნიკური <br /> აღჭურვა
@@ -99,7 +168,7 @@ export default function Page() {
               </ul>
             </div>
 
-            <div className={styles.item} data-aos="fade-up" data-aos-delay="400">
+            <div className={styles.item} data-aos="fade-up">
               <Image src="/img/4.3.png" alt="Installation" width={80} height={88} className={styles.itemImg} />
               <h2>
                 მონტაჟი და <br /> ინსტალაცია
@@ -112,7 +181,7 @@ export default function Page() {
               </ul>
             </div>
 
-            <div className={styles.item} data-aos="fade-up" data-aos-delay="500">
+            <div className={styles.item} data-aos="fade-up">
               <Image src="/img/4.4.png" alt="Technical Support" width={67} height={82} className={styles.itemImg} />
               <h2>ტექნიკური სერვისი და მხარდაჭერა</h2>
               <ul>
