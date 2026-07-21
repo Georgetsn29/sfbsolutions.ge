@@ -32,19 +32,17 @@
 
 import type { NextConfig } from "next";
 
-const basePath = "/sfbsolutions.ge";
-
 const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
-  basePath: basePath,
-  env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
-  },
+
+  basePath: "/sfbsolutions.ge",
+  
   images: {
     unoptimized: true,
   },
   trailingSlash: true,
+  
 };
 
 export default nextConfig;
