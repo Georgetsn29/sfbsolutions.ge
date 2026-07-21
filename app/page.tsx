@@ -156,7 +156,7 @@ export default function Page() {
               </ul>
             </div>
 
-            <div className={styles.item} data-aos="fade-up">
+            <div className={styles.item} data-aos="fade-up" data-aos-delay="150">
               <Image src="/img/4.2.png" alt="Technical Equipment" width={91} height={82} className={styles.itemImg} />
               <h2>
                 ტექნიკური <br /> აღჭურვა
@@ -168,7 +168,7 @@ export default function Page() {
               </ul>
             </div>
 
-            <div className={styles.item} data-aos="fade-up">
+            <div className={styles.item} data-aos="fade-up" data-aos-delay="250">
               <Image src="/img/4.3.png" alt="Installation" width={80} height={88} className={styles.itemImg} />
               <h2>
                 მონტაჟი და <br /> ინსტალაცია
@@ -181,7 +181,7 @@ export default function Page() {
               </ul>
             </div>
 
-            <div className={styles.item} data-aos="fade-up">
+            <div className={styles.item} data-aos="fade-up" data-aos-delay="350">
               <Image src="/img/4.4.png" alt="Technical Support" width={67} height={82} className={styles.itemImg} />
               <h2>ტექნიკური სერვისი და მხარდაჭერა</h2>
               <ul>

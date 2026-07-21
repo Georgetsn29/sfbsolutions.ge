@@ -7,6 +7,9 @@
 //     basePath: `/${repoName}`,
 //     assetPrefix: `/${repoName}`,
 //     trailingSlash: true,
+//     images: {
+//     unoptimized: true,
+//   },
 // };
 
 // export default NextConfig;
@@ -14,14 +17,33 @@
 
 
 
+// import type { NextConfig } from "next";
+
+// const NextConfig: NextConfig = {
+//   output: "export",
+//   trailingSlash: true,
+//   images: {
+//     unoptimized: true,
+//   },
+// };
+
+// export default NextConfig;
+
+
 import type { NextConfig } from "next";
 
-const NextConfig: NextConfig = {
+const nextConfig: NextConfig = {
   output: "export",
-  trailingSlash: true,
+  reactStrictMode: true,
+
+  basePath: "/Portfolio",
+  
   images: {
     unoptimized: true,
   },
+  trailingSlash: true,
+  
 };
 
-export default NextConfig;
+export default nextConfig;
+
