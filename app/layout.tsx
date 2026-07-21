@@ -10,7 +10,8 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ka">
       <head>
-        <link rel="icon" href="./img/head.png" />
+        {/* Changed href from "./img/head.png" to "/img/head.png" */}
+        <link rel="icon" href="/img/head.png" />
       </head>
       <body>{children}</body>
     </html>
