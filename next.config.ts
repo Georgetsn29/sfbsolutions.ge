@@ -36,7 +36,7 @@ const nextConfig: NextConfig = {
   output: "export",
   reactStrictMode: true,
 
-  basePath: "/Portfolio",
+  basePath: "/sfbsolutions.ge",
   
   images: {
     unoptimized: true,
